@@ -1,0 +1,417 @@
+<!--
+<?php
+
+$conn = mysqli_connect('localhost','root','','contact_db') or die('connection failed');
+
+if(isset($_POST['send'])){
+
+   $name = mysqli_real_escape_string($conn, $_POST['name']);
+   $email = mysqli_real_escape_string($conn, $_POST['email']);
+   $number = mysqli_real_escape_string($conn, $_POST['number']);
+   $msg = mysqli_real_escape_string($conn, $_POST['message']);
+
+   $select_message = mysqli_query($conn, "SELECT * FROM `contact_form` WHERE name = '$name' AND email = '$email' AND number = '$number' AND message = '$msg'") or die('query failed');
+   
+   if(mysqli_num_rows($select_message) > 0){
+      $message[] = 'message sent already!';
+   }else{
+      mysqli_query($conn, "INSERT INTO `contact_form`(name, email, number, message) VALUES('$name', '$email', '$number', '$msg')") or die('query failed');
+      $message[] = 'message sent successfully!';
+   }
+
+}
+
+?>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Zai's Portfolio</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+   <!-- aos css link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!--
+<?php
+
+if(isset($message)){
+   foreach($message as $message){
+      echo '
+      <div class="message" data-aos="zoom-out">
+         <span>'.$message.'</span>
+         <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+      </div>
+      ';
+   }
+}
+
+?>
+-->
+<!-- header section starts  -->
+
+<header class="header">
+
+   <div id="menu-btn" class="fas fa-bars"></div>
+
+   <a href="#home" class="logo">Portfolio</a>
+
+   <nav class="navbar">
+      <a href="#home" class="active">home</a>
+      <a href="#about">about</a>
+      <a href="#services">services</a>
+      <a href="#portfolio">portfolio</a>
+      <a href="#contact">contact</a>
+   </nav>
+
+   <div class="follow">
+      <a href="https://www.facebook.com/LePoochy/" class="fab fa-facebook-f"></a>
+      <a href="#" class="fab fa-twitter"></a>
+      <a href="https://www.instagram.com/alimonzhyron/" class="fab fa-instagram"></a>
+      <a href="https://www.linkedin.com/in/zhyronalimon/" class="fab fa-linkedin"></a>
+      <a href="https://github.com/Zai-exe" class="fab fa-github"></a>
+   </div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+   <div class="image" data-aos="fade-right">
+      <img src="images/zai.jpg" alt="">
+   </div>
+
+   <div class="content">
+      <h3 data-aos="fade-up">hi, i am zai</h3>
+      <span data-aos="fade-up">Political Science Student & Tech Enthusiast</span>
+      <p data-aos="fade-up">I'm a self-motivated Political Science student who loves technology. I learn and apply new things easily and am always looking for ways to grow personally and professionally.</p>
+      <a data-aos="fade-up" href="#about" class="btn">about me</a>
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+   <h1 class="heading" data-aos="fade-up"> <span>biography</span> </h1>
+
+   <div class="biography">
+
+      <p data-aos="fade-up">a hardworking and creative student with a passion for innovation. 
+         With a talent for applying new concepts quickly, Always seeking to expand his knowledge
+         and push the boundaries of what is possible. Whether it's in the classroom or in his personal pursuits, 
+         he brings a unique perspective to every project he takes on, making him an invaluable asset to any team.</p>
+
+      <div class="bio">
+         <h3 data-aos="zoom-in"> <span>name : </span> Zhyron Wynriel Alimon </h3>
+         <h3 data-aos="zoom-in"> <span>email : </span> zai.alimon@gmail.com </h3>
+         <h3 data-aos="zoom-in"> <span>address : </span> Ligao City </h3>
+         <h3 data-aos="zoom-in"> <span>phone : </span> +63-999-569-0462 </h3>
+         <h3 data-aos="zoom-in"> <span>age : </span> 23 years </h3>
+         <h3 data-aos="zoom-in"> <span>experience : </span> Depends </h3>
+      </div>
+
+      <a href="images/Zhyron_Wynriel_Alimon_RESUME.pdf" class="btn" data-aos="fade-up">download CV</a>
+     <div>
+      <a href="images/Alimon_Thesis Manuscript.pdf" class="btn" data-aos="fade-up">download Undergraduate Thesis</a>
+     </div>
+   </div>
+   
+   <div class="skills" data-aos="fade-up">
+
+      <h1 class="heading"> <span>skills</span> </h1>
+
+      <div class="progress">
+         <div class="bar" data-aos="fade-left"> <h3><span>HTML</span> <span>95%</span></h3> </div>
+         <div class="bar" data-aos="fade-right"> <h3><span>CSS</span> <span>80%</span></h3> </div>
+         <div class="bar" data-aos="fade-left"> <h3><span>JavaScript</span> <span>65%</span></h3> </div>
+         <div class="bar" data-aos="fade-right"> <h3><span>PHP</span> <span>80%</span></h3> </div>
+      </div>
+
+   </div>
+
+   <div class="edu-exp">
+
+      <h1 class="heading" data-aos="fade-up"> <span>education & experience</span> </h1>
+
+      <div class="row">
+
+         <div class="box-container">
+
+            <h3 class="title" data-aos="fade-right">education</h3>
+
+            <div class="box" data-aos="fade-right">
+               <span>( 2007 - 2013 )</span>
+               <h3>Elementary</h3>
+               <p>Our Children's Montessori Foundation Inc.</p>
+               <p>GWA: 90</p>
+            </div>
+
+            <div class="box" data-aos="fade-right">
+               <span>( 2013 - 2017 )</span>
+               <h3>Junior High School (Science Oriented)</h3>
+               <p>University of Santo Tomas-Legazpi</p>
+               <p>GWA: 88</p>
+            </div>
+
+            <div class="box" data-aos="fade-right">
+               <span>( 2017 - 2019 )</span>
+               <h3>Senior High School (STEM+)</h3>
+               <p>University of Santo Tomas-Legazpi</p>
+               <p>GWA: 89</p>
+            </div>
+
+            <div class="box" data-aos="fade-right">
+               <span>( 2019 - Present )</span>
+               <h3>Tertiary</h3>
+               <p>University of Santo Tomas-Legazpi</p>
+               <p>CSWCA Scholar</p>
+               <p>GWA: 92</p>
+            </div>
+
+            <div class="box" data-aos="fade-right">
+               <span>( Additional Courses Taken )</span>
+               <p>Chemistry for Engineers</p>
+               <p>Programming Logic and Design, LID/ITC</p>
+               <p>Engineering Drawing & Plans, Lab</p>
+               <p>Calculus 1 (Differential Calculus)</p>
+            </div>
+
+         </div>
+
+         <div class="box-container">
+
+            <h3 class="title" data-aos="fade-left">experience</h3>
+
+            <div class="box" data-aos="fade-left">
+               <span>UST-Legazpi Hospital ( 2019 )</span>
+               <h3>Billing Clerk Intern</h3>
+               <p>Has basic understanding of accounting principles and proficient in using billing software.</p>
+            </div>
+
+            <div class="box" data-aos="fade-left">
+               <span>J&K Medical Supplies ( 2018 - 2019 )</span>
+               <h3>Bookkeeper/Social Media Manager/Graphic Artist</h3>
+               <p>Possess a diverse range of skills including financial management, graphic design, and social media marketing,
+                  which enables me to effectively manage multiple aspects of a business and deliver impactful results.</p>
+            </div>
+
+            <div class="box" data-aos="fade-left">
+               <span>( Present )</span>
+               <h3>Freelance Video editor & Graphic Artist</h3>
+               <p>Possess expertise in various video editing software and graphic design tools.
+                  Keen eye for detail and a commitment to meeting client's needs and exceeding expectations.</p>
+            </div>
+      
+
+         <div class="box" data-aos="fade-left">
+            <span>Bose Bose & Associates Law Offices ( 2022 )</span>
+            <h3>Paralegal Intern</h3>
+            <p>Performed a variety of tasks such as legal research,
+               drafting legal documents and assisting in court proceedings, gained valuable hands-on experience in the legal field</p>
+         </div>
+
+         </div>
+
+      </div>
+
+   </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+   <h1 class="heading" data-aos="fade-up"> <span>services</span> </h1>
+
+   <div class="box-container">
+
+      <div class="box" data-aos="zoom-in">
+         <i class="fas fa-code"></i>
+         <h3>web development</h3>
+         <p>custom web development services that deliver user-friendly, visually appealing,
+            and high-performing websites tailored to meet the unique needs of each client</p>
+      </div>
+
+      <div class="box" data-aos="zoom-in">
+         <i class="fas fa-paint-brush"></i>
+         <h3>graphic design & Video Editing</h3>
+         <p>Expertise in creating visually stunning and engaging designs and videos that help businesses
+            and organizations effectively communicate their brand message</p>
+      </div>
+
+      <div class="box" data-aos="zoom-in">
+         <i class="fab fa-bootstrap"></i>
+         <h3>bootstrap</h3>
+         <p>fast and efficient way to develop responsive and mobile-first
+            websites and applications that adapt seamlessly to various devices and screen sizes.</p>
+
+      </div>
+
+      <div class="box" data-aos="zoom-in">
+         <i class="fas fa-chart-line"></i>
+         <h3>Bookkeeping</h3>
+         <p>provide reliable financial record-keeping to help businesses manage their finances efficiently and make informed decisions.</p>
+      </div>
+
+      <div class="box" data-aos="zoom-in">
+         <i class="fas fa-bullhorn"></i>
+         <h3>digital marketing</h3>
+         <p>Uses the latest strategies and techniques to help businesses increase their online visibility, generate leads and conversions, and drive growth.</p>
+      </div>
+
+      <div class="box" data-aos="zoom-in">
+         <i class="fab fa-wordpress"></i>
+         <h3>wordpress</h3>
+         <p>Still learning this one :/ don't avail</p>
+      </div>
+
+   </div>
+
+</section>
+
+<!-- services section ends -->
+
+<!-- portfolio section starts  -->
+
+<section class="portfolio" id="portfolio">
+
+   <h1 class="heading" data-aos="fade-up"> <span>portfolio</span> </h1>
+   <h2 class="heading" data-aos="fade-up"> UNDER CONSTRUCTION </h2>
+<!--
+   <div class="box-container">
+
+      <div class="box" data-aos="zoom-in">
+         <img src="images/img-1.jpg" alt="">
+         <h3>web development</h3>
+         <span>( 2020 - 2022 )</span>
+      </div>
+
+      <div class="box" data-aos="zoom-in">
+         <img src="images/img-2.jpg" alt="">
+         <h3>web development</h3>
+         <span>( 2020 - 2022 )</span>
+      </div>
+
+      <div class="box" data-aos="zoom-in">
+         <img src="images/img-3.jpg" alt="">
+         <h3>web development</h3>
+         <span>( 2020 - 2022 )</span>
+      </div>
+
+      <div class="box" data-aos="zoom-in">
+         <img src="images/img-4.jpg" alt="">
+         <h3>web development</h3>
+         <span>( 2020 - 2022 )</span>
+      </div>
+
+      <div class="box" data-aos="zoom-in">
+         <img src="images/img-5.jpg" alt="">
+         <h3>web development</h3>
+         <span>( 2020 - 2022 )</span>
+      </div>
+
+      <div class="box" data-aos="zoom-in">
+         <img src="images/img-6.jpg" alt="">
+         <h3>web development</h3>
+         <span>( 2020 - 2022 )</span>
+      </div>
+
+   </div>
+-->
+</section>
+
+<!-- portfolio section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+   <h1 class="heading" data-aos="fade-up"> <span>contact me</span> </h1>
+
+   <form action="" method="post">
+      <div class="flex">
+         <input data-aos="fade-right" type="text" name="name" placeholder="enter your name" class="box" required>
+         <input data-aos="fade-left" type="email" name="email" placeholder="enter your email" class="box" required>
+      </div>
+      <input data-aos="fade-up" type="number" min="0" name="number" placeholder="enter your number" class="box" required>
+      <textarea data-aos="fade-up" name="message" class="box" required placeholder="enter your message" cols="30" rows="10"></textarea>
+      <input type="submit" data-aos="zoom-in" value="send message" name="send" class="btn">
+   </form>
+
+   <div class="box-container">
+
+      <div class="box" data-aos="zoom-in">
+         <i class="fas fa-phone"></i>
+         <h3>phone</h3>
+         <p>+63-999-569-0462</p>
+      </div>
+
+      <div class="box" data-aos="zoom-in">
+         <i class="fas fa-envelope"></i>
+         <h3>email</h3>
+         <p>zai.alimon@gmail.com</p>
+      </div>
+
+      <div class="box" data-aos="zoom-in">
+         <i class="fas fa-map-marker-alt"></i>
+         <h3>address</h3>
+         <p>Binatagan, Ligao City</p>
+      </div>
+
+   </div>
+
+</section>
+
+<!-- contact section ends -->
+
+<div class="credit">made by <span>Zhyron Wynriel Alimon</span> </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+<!-- aos js link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script>
+
+   AOS.init({
+      duration:800,
+      delay:300
+   });
+
+</script>
+   
+</body>
+</html>
