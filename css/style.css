@@ -15,7 +15,7 @@
    box-sizing: border-box;
    outline: none; border:none;
    text-decoration: none;
-   text-transform: capitalize;
+   text-transform: none;
    color:var(--black);
 }
 
@@ -272,15 +272,15 @@ section{
 }
 
 .about .skills .progress .bar:nth-child(2) h3{
-   width: 80%;
+   width: 90%;
 }
 
 .about .skills .progress .bar:nth-child(3) h3{
-   width: 65%;
+   width: 90%;
 }
 
 .about .skills .progress .bar:nth-child(4) h3{
-   width: 80%;
+   width: 85%;
 }
 
 .about .edu-exp .row{
