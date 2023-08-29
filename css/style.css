@@ -328,6 +328,7 @@ section{
    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
    gap:1.5rem;
    align-items: flex-start;
+   padding: 1.5rem ;
 }
 
 .services .box-container .box{
@@ -367,10 +368,12 @@ section{
 }
 
 .portfolio .box-container{
-   display: grid;
+   display: flex;
    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
    gap:1.5rem;
    align-items: flex-start;
+     display: flex;
+   flex-wrap: wrap;
 }
 
 .portfolio .box-container .box img{
@@ -389,6 +392,28 @@ section{
    font-size: 1.7rem;
 }
 
+.Graphicsportfolio .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap:1.5rem;
+   align-items: flex-start;
+}
+
+.Graphicsportfolio .box-container .box img{
+   height: 30rem;
+   width: 100%;
+   object-fit: cover;
+}
+
+.Graphicsportfolio .box-container .box h3{
+   margin:1rem 0;
+   font-size: 2rem;
+   font-weight: normal;
+}
+
+.Graphicsportfolio .box-container .box span{
+   font-size: 1.7rem;
+}
 .contact form{
    max-width: 70rem;
    margin:0 auto;
